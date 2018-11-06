@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import post.com.boxes.model.Box3;
 import post.com.boxes.model.Box5;
@@ -35,6 +36,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btnMainCheck:
+                if (editLenght.getText().toString().isEmpty() ||
+                        editWidth.getText().toString().isEmpty() ||
+                        editHeight.getText().toString().isEmpty()) {
+                    Toast.makeText(this, "長、寬、高，請完整輸入", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 double length = Double.parseDouble(editLenght.getText().toString());
                 double width = Double.parseDouble(editWidth.getText().toString());
                 double height = Double.parseDouble(editHeight.getText().toString());
