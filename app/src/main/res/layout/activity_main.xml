@@ -7,12 +7,80 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textMainTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="Your object dimension:"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textMainLength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Length:"
+        app:layout_constraintStart_toStartOf="@id/textMainTitle"
+        app:layout_constraintTop_toBottomOf="@id/textMainTitle" />
+
+    <EditText
+        android:id="@+id/editMainLength"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:inputType="number|numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/textMainLength"
+        app:layout_constraintTop_toBottomOf="@id/textMainLength" />
+
+    <TextView
+        android:id="@+id/textMainWidth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Width:"
+        app:layout_constraintStart_toStartOf="@id/textMainLength"
+        app:layout_constraintTop_toBottomOf="@id/editMainLength" />
+
+    <EditText
+        android:id="@+id/editMainWidth"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:inputType="number|numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/textMainWidth"
+        app:layout_constraintTop_toBottomOf="@id/textMainWidth" />
+
+    <TextView
+        android:id="@+id/textMainHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Height:"
+        app:layout_constraintStart_toStartOf="@id/editMainWidth"
+        app:layout_constraintTop_toBottomOf="@id/editMainWidth" />
+
+    <EditText
+        android:id="@+id/editMainHeight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:inputType="number|numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/textMainHeight"
+        app:layout_constraintTop_toBottomOf="@id/textMainHeight" />
+
+    <Button
+        android:id="@+id/btnMainCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Check"
+        app:layout_constraintStart_toStartOf="@id/editMainHeight"
+        app:layout_constraintTop_toBottomOf="@id/editMainHeight" />
 
 </android.support.constraint.ConstraintLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textResultBoxName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textResultDimensionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Dimension: "
+        app:layout_constraintStart_toStartOf="@id/textResultBoxName"
+        app:layout_constraintTop_toBottomOf="@id/textResultBoxName" />
+
+    <TextView
+        android:id="@+id/textResultDimensionValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/textResultDimensionTitle"
+        app:layout_constraintTop_toTopOf="@id/textResultDimensionTitle" />
+
+    <TextView
+        android:id="@+id/textResultPriceTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Price: "
+        app:layout_constraintStart_toStartOf="@id/textResultDimensionTitle"
+        app:layout_constraintTop_toBottomOf="@id/textResultDimensionTitle" />
+
+    <TextView
+        android:id="@+id/textResultPriceValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/textResultPriceTitle"
+        app:layout_constraintTop_toTopOf="@id/textResultPriceTitle" />
+
+
+</android.support.constraint.ConstraintLayout>
